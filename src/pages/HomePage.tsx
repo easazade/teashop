@@ -1,3 +1,3 @@
 export default function HomePage() {
-  return <div>Home</div>
+  return <div className={'flex items-center justify-center h-full'}>Home</div>
 }
