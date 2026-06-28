@@ -1,3 +1,9 @@
+import { Navbar } from '../components/Navbar'
+
 export default function HomePage() {
-  return <div className={'flex items-center justify-center h-full'}>Home</div>
+  return (
+    <div className={'flex flex-column items-start'}>
+      <Navbar/>
+    </div>
+  )
 }
