@@ -1,16 +1,17 @@
 import { Languages, Menu, Search, ShoppingBasket } from 'lucide-react'
 import { useState } from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import CartOverlay from './Cart/CartOverlay'
 import Logo from './Logo'
 
 export function Navbar() {
   const [isCartOpen, setIsCartOpen] = useState(false)
+  const navigate = useNavigate()
 
   return (
     <nav className={'flex flex-row items-center gap-4 w-full bg-background h-20 shadow-xs p-8'}>
       <Menu size={20} cursor={'pointer'} />
-      <div className={'md:absolute md:left-1/2 md:-translate-x-1/2'}>
+      <div className={'md:absolute md:left-1/2 md:-translate-x-1/2 cursor-pointer'} onClick={() => navigate('/')}>
         <Logo sizeType="compact" />
       </div>
       <div className={'flex-1'}></div>
