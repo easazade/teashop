@@ -9,7 +9,7 @@ export function Navbar() {
 
   return (
     <nav className={'flex flex-row items-center gap-4 w-full bg-background h-20 shadow-xs p-8'}>
-      <Menu size={20} />
+      <Menu size={20} cursor={'pointer'} />
       <div className={'md:absolute md:left-1/2 md:-translate-x-1/2'}>
         <Logo sizeType="compact" />
       </div>
@@ -17,7 +17,7 @@ export function Navbar() {
       <Link to={'/login'}>Login</Link>
       <Search size={20} />
       <Languages size={20} />
-      <ShoppingBasket size={20} onClick={() => setIsCartOpen(true)} cursor={'pointer'}/>
+      <ShoppingBasket size={20} onClick={() => setIsCartOpen(true)} cursor={'pointer'} />
       <CartOverlay isOpen={isCartOpen} closeOverlay={() => setIsCartOpen(false)} />
     </nav>
   )
