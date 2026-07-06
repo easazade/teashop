@@ -2,6 +2,7 @@
 
 @theme {
   --color-background: white;
+  --color-placeholder: #F4F4F4;
 }
 
 @layer base {

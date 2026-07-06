@@ -5,7 +5,6 @@ export function SearchBar(): ReactElement {
   const [text, setText] = useState('')
 
   function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
-    console.log(event.target.value)
     let processed = event.target.value
     if (processed.startsWith('+')) {
       processed = processed.substring(1)
