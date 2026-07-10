@@ -20,7 +20,7 @@ export function Slider({ images = [] }: SliderProps) {
   }, [images.length])
 
   return (
-    <div className={'h-80 md:h-172 w-full bg-placeholder overflow-hidden'}>
+    <div className={'h-80 md:h-154 w-full bg-placeholder overflow-hidden'}>
       {images[currentIndex] && (
         <img key={images[currentIndex]} src={images[currentIndex]} alt={''} className={'h-full w-full object-cover'} />
       )}
