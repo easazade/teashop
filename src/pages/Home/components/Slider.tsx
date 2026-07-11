@@ -13,7 +13,7 @@ export function Slider({ images = [] }: SliderProps) {
 
     const intervalId = window.setInterval(() => {
       setCurrentIndex((current) => (current + 1) % images.length)
-    }, 7000)
+    }, 2000)
 
     return () => {
       window.clearInterval(intervalId)
@@ -40,6 +40,22 @@ export function Slider({ images = [] }: SliderProps) {
           />
         )}
       </AnimatePresence>
+      <SlideIndicator slideIndex={currentIndex} slidesCount={images.length} />
+    </div>
+  )
+}
+
+type SlideIndicatorProps = {
+  slideIndex: number
+  slidesCount: number
+}
+
+function SlideIndicator({ slideIndex, slidesCount }: SlideIndicatorProps) {
+  return (
+    <div className={'z-50 inset-2 bg-gray-500 flex flex-row'}>
+      {Array.from({ length: slidesCount }).map((_, index) => {
+        return <div>${index}</div>
+      })}
     </div>
   )
 }
