@@ -23,7 +23,7 @@ export function Slider({ images = [] }: SliderProps) {
   const currentImage = images[currentIndex]
 
   return (
-    <div className={'relative h-80 md:h-154 w-full bg-placeholder overflow-hidden'}>
+    <div className={'relative h-80 md:h-160 w-full bg-placeholder overflow-hidden'}>
       {/* NOTE: AnimatePresence component checks the tree and if a motion component is either removed or its key is changed it
                 will keep it in the // tree run its exit animation (if defined) then it will remove it from tree */}
       <AnimatePresence initial={false}>
