@@ -13,7 +13,7 @@ export function Slider({ images = [] }: SliderProps) {
 
     const intervalId = window.setInterval(() => {
       setCurrentIndex((current) => (current + 1) % images.length)
-    }, 2000)
+    }, 7000)
 
     return () => {
       window.clearInterval(intervalId)
@@ -32,7 +32,7 @@ export function Slider({ images = [] }: SliderProps) {
             key={currentImage}
             src={currentImage}
             alt={''}
-            className={'absolute inset-0 h-full w-full object-cover'}
+            className={'absolute inset-0 z-0 h-full w-full object-cover'}
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: '-100%', opacity: 0 }}
@@ -40,21 +40,41 @@ export function Slider({ images = [] }: SliderProps) {
           />
         )}
       </AnimatePresence>
-      <SlideIndicator slideIndex={currentIndex} slidesCount={images.length} />
+      <SlideIndicator
+        currentIndex={currentIndex}
+        slidesCount={images.length}
+        goToSlide={(index: number) => {
+          if (index != currentIndex) {
+            setCurrentIndex(index)
+          }
+        }}
+      />
     </div>
   )
 }
 
 type SlideIndicatorProps = {
-  slideIndex: number
+  currentIndex: number
   slidesCount: number
+  goToSlide: (index: number) => void
 }
 
-function SlideIndicator({ slideIndex, slidesCount }: SlideIndicatorProps) {
+function SlideIndicator({ currentIndex, slidesCount, goToSlide }: SlideIndicatorProps) {
   return (
-    <div className={'z-50 inset-2 bg-gray-500 flex flex-row'}>
+    <div
+      className={
+        'absolute bottom-2 left-1/2 z-50 -translate-x-1/2 bg-gray-300/50 flex flex-row justify-center gap-1 p-1 rounded-sm'
+      }
+    >
       {Array.from({ length: slidesCount }).map((_, index) => {
-        return <div>${index}</div>
+        const bg = currentIndex === index ? 'bg-black' : 'bg-white'
+        return (
+          <div
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`${bg} w-1.75 h-1.75 rounded-sm cursor-pointer`}
+          ></div>
+        )
       })}
     </div>
   )
