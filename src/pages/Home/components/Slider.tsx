@@ -32,7 +32,7 @@ export function Slider({ images = [] }: SliderProps) {
             key={currentImage}
             src={currentImage}
             alt={''}
-            className={'absolute inset-0 z-0 h-full w-full object-cover'}
+            className={'absolute inset-0 h-full w-full object-cover'}
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: '-100%', opacity: 0 }}
@@ -63,7 +63,7 @@ function SlideIndicator({ currentIndex, slidesCount, goToSlide }: SlideIndicator
   return (
     <div
       className={
-        'absolute bottom-2 left-1/2 z-50 -translate-x-1/2 bg-gray-300/50 flex flex-row justify-center gap-1 p-1 rounded-sm'
+        'absolute bottom-2 left-1/2 -translate-x-1/2 bg-gray-300/50 flex flex-row justify-center gap-1 p-1 rounded-sm'
       }
     >
       {Array.from({ length: slidesCount }).map((_, index) => {

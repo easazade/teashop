@@ -10,7 +10,7 @@ export function Navbar() {
   const navigate = useNavigate()
 
   return (
-    <nav className={'flex flex-row items-center gap-4 w-full bg-background h-20 shadow-xs p-8'}>
+    <nav className={'sticky top-0 z-50 flex flex-row items-center gap-4 w-full bg-background h-20 shadow-xs p-8'}>
       <Menu size={20} cursor={'pointer'} />
       <SearchBar />
       <div className={'md:absolute md:left-1/2 md:-translate-x-1/2 cursor-pointer'} onClick={() => navigate('/')}>
