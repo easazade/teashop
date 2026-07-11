@@ -1,4 +1,5 @@
 import { Navbar } from '../../components/Navbar'
+import Explore from './components/Explore'
 import { Slider } from './components/Slider'
 
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
           'https://images.pexels.com/photos/38360655/pexels-photo-38360655.jpeg',
         ]}
       />
+      <Explore />
     </div>
   )
 }
