@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --color-background: white;
   --color-surface: white;
   --color-placeholder: #f4f4f4;
+  --color-text: #26251e;
+
+  --font-family-body: Inter;
+  --font-family-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-family-heading: Poppins;
 }
 
 @layer base {
@@ -16,18 +22,26 @@
   body {
     padding: 0;
     margin: 0;
+    font-family: var(--font-family-body);
+    color: var(--color-text);
   }
 
   h1 {
     @apply text-4xl;
+    font-family: var(--font-family-heading);
+    color: var(--color-text);
   }
 
   h2 {
     @apply text-3xl;
+    font-family: var(--font-family-heading);
+    color: var(--color-text);
   }
 
   h3 {
     @apply text-2xl;
+    font-family: var(--font-family-heading);
+    color: var(--color-text);
   }
 }
 
