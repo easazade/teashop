@@ -2,7 +2,7 @@
 
 @theme {
   --color-background: white;
-  --color-placeholder: #F4F4F4;
+  --color-placeholder: #f4f4f4;
 }
 
 @layer base {
@@ -15,6 +15,18 @@
   body {
     padding: 0;
     margin: 0;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
   }
 }
 

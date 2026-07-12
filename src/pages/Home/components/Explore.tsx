@@ -11,12 +11,13 @@ export default function Explore() {
 
   return (
     <>
-      <h3 className={''}>Explore our Collections</h3>
-      <div className={'flex flex-row justify-between h-140 w-full overflow-hidden'}>
+      <h3 className={' pt-12 pb-6'}>Explore our Collections</h3>
+
+      <div className={'flex h-140 w-full overflow-hidden gap-4'}>
         {collections.map((imageUrl) => {
           return (
-            <div className={'h-full w-full flex-1'}>
-              <img key={imageUrl} src={imageUrl} className={'h-full max-h-full object-cover'} />
+            <div key={imageUrl} className={'h-full flex-1 cursor-pointer'}>
+              <img src={imageUrl} className={'h-full w-full object-cover'} />
             </div>
           )
         })}
