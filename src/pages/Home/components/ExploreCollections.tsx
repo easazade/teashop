@@ -1,4 +1,4 @@
-export default function Explore() {
+export default function ExploreCollections() {
   const collections = [
     'https://images.pexels.com/photos/31474385/pexels-photo-31474385.jpeg',
     'https://images.pexels.com/photos/6694154/pexels-photo-6694154.jpeg',
