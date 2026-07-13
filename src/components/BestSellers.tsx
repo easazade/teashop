@@ -33,7 +33,11 @@ export default function BestSellers() {
           )
         })}
       </ul>
-      <div className="flex flex-1 flex-row gap-2">{Array.from({ length: 4 }).map((item, index) => ShopItem())}</div>
+      <div className="mb-6 flex flex-1 flex-row gap-2">
+        {Array.from({ length: 4 }, (_, index) => {
+          return <ShopItem key={index} />
+        })}
+      </div>
       <AppButton label="SEE MORE" onClick={() => {}} minWidth={200} />
     </div>
   )
