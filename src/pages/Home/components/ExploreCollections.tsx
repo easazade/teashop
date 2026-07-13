@@ -38,8 +38,8 @@ type ArrowButtonProps = {
 function ArrowButton({ direction, onTap }: ArrowButtonProps) {
   return (
     <div
-      className={`bg-background/70 hover:bg-background absolute top-1/2 m-2 flex h-12 w-12 -translate-y-1/2
-        cursor-pointer items-center justify-center rounded-4xl shadow-2xl shadow-gray-300 transition-colors duration-100
+      className={`bg-surface/70 hover:bg-surface absolute top-1/2 m-2 flex h-12 w-12 -translate-y-1/2 cursor-pointer
+        items-center justify-center rounded-4xl shadow-2xl shadow-gray-300 transition-colors duration-100
         ${direction === 'left' ? 'left-0' : 'right-0'} `}
       onClick={() => onTap()}
     >

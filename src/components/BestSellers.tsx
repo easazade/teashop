@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import AppButton from './AppButton'
+import ShopItem from './ShopItem'
 
 export default function BestSellers() {
   const tabNames = ['TEAS', 'INFUSIONS', 'ROOIBOS', 'MATCHA TEA', 'PACKS']
@@ -32,8 +33,8 @@ export default function BestSellers() {
           )
         })}
       </ul>
-      <div className="flex-1">Items</div>
-      <AppButton label="SEE MORE" onClick={() => {}} />
+      <div className="flex flex-1 flex-row gap-2">{Array.from({ length: 4 }).map((item, index) => ShopItem())}</div>
+      <AppButton label="SEE MORE" onClick={() => {}} minWidth={200} />
     </div>
   )
 }

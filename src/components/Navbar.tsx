@@ -12,7 +12,7 @@ export function Navbar() {
   return (
     <>
       <CartOverlay isOpen={isCartOpen} closeOverlay={() => setIsCartOpen(false)} />
-      <nav className={'bg-background sticky top-0 z-50 flex h-20 w-full flex-row items-center gap-4 p-8 shadow-xs'}>
+      <nav className={'bg-surface sticky top-0 z-50 flex h-20 w-full flex-row items-center gap-4 p-8 shadow-xs'}>
         <Menu size={20} cursor={'pointer'} />
         <SearchBar />
         <div className={'cursor-pointer md:absolute md:left-1/2 md:-translate-x-1/2'} onClick={() => navigate('/')}>

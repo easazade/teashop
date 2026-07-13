@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-background: white;
+  --color-background: #fbfaf6;
   --color-surface: white;
   --color-placeholder: #f4f4f4;
   --color-text: #173f35;
@@ -22,6 +22,7 @@
   }
 
   body {
+    background-color: var(--color-background);
     padding: 0;
     margin: 0;
     font-family: var(--font-family-body);
