@@ -27,7 +27,7 @@ export function Slider() {
   const currentImage = images[currentIndex]
 
   return (
-    <div className={'relative h-80 md:h-160 w-full bg-placeholder overflow-hidden cursor-pointer'}>
+    <div className={'bg-placeholder relative h-80 w-full cursor-pointer overflow-hidden md:h-160'}>
       {/* NOTE: AnimatePresence component checks the tree and if a motion component is either removed or its key is changed it
                 will keep it in the // tree run its exit animation (if defined) then it will remove it from tree */}
       <AnimatePresence initial={false}>
@@ -66,9 +66,8 @@ type SlideIndicatorProps = {
 function SlideIndicator({ currentIndex, slidesCount, goToSlide }: SlideIndicatorProps) {
   return (
     <div
-      className={
-        'absolute bottom-2 left-1/2 -translate-x-1/2 bg-gray-300/50 flex flex-row justify-center gap-1 p-1 rounded-sm'
-      }
+      className={`absolute bottom-2 left-1/2 flex -translate-x-1/2 flex-row justify-center gap-1 rounded-sm
+        bg-gray-300/50 p-1`}
     >
       {Array.from({ length: slidesCount }).map((_, index) => {
         const bg = currentIndex === index ? 'bg-black' : 'bg-white'
@@ -76,7 +75,7 @@ function SlideIndicator({ currentIndex, slidesCount, goToSlide }: SlideIndicator
           <div
             key={index}
             onClick={() => goToSlide(index)}
-            className={`${bg} w-1.75 h-1.75 rounded-sm cursor-pointer`}
+            className={`${bg} h-1.75 w-1.75 cursor-pointer rounded-sm`}
           ></div>
         )
       })}

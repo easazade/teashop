@@ -22,8 +22,8 @@ export function SearchBar(): ReactElement {
         onChange={handleInput}
         placeholder="Search"
         aria-label="Search"
-        className={`w-32 bg-transparent text-sm outline-none border-0 p-0
-         placeholder:text-gray-400 focus:border-0 focus:outline-none focus:ring-0 md:w-44`}
+        className={`w-32 border-0 bg-transparent p-0 text-sm outline-none placeholder:text-gray-400 focus:border-0
+          focus:ring-0 focus:outline-none md:w-44`}
       />
       <Search size={20} className={'cursor-pointer transition-colors hover:text-gray-900'} />
     </div>

@@ -6,7 +6,7 @@ export default function BestSellers() {
   const [selectedTabIndex, selectTabIndex] = useState(0)
 
   return (
-    <div className="flex flex-col m-14 items-center gap-6">
+    <div className="m-14 flex flex-col items-center gap-6">
       <h3 className="">Best Sellers. Haven't Tried them yet?</h3>
       <ul className="flex flex-row gap-6 text-sm" role="tablist">
         {tabNames.map((name, index) => {

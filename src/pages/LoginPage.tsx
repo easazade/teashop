@@ -1,3 +1,3 @@
 export default function LoginPage() {
-  return <div className={'flex items-center justify-center h-full'}>Login</div>
+  return <div className={'flex h-full items-center justify-center'}>Login</div>
 }

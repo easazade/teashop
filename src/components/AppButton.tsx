@@ -13,7 +13,8 @@ export default function AppButton({ label, onClick, minWidth = 100 }: AppButtonP
       onClick={onClick}
       // in below line you see javascript object short hand feature. complete version is {minWidth: minWidth}
       style={{ minWidth }}
-      className="bg-button text-button-text text-sm p-2 border-3 border-button transition-colors cursor-pointer hover:bg-transparent hover:text-button"
+      className="bg-button text-button-text border-button hover:text-button cursor-pointer border-3 p-2 text-sm
+        transition-colors hover:bg-transparent"
     >
       {label.toUpperCase()}
     </button>

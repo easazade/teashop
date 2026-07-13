@@ -15,7 +15,7 @@ export default function ExploreCollections() {
     <>
       <h3 className={'pt-12 pb-6'}>Explore our Collections</h3>
 
-      <div className={'relative flex h-140 w-full overflow-hidden gap-4'}>
+      <div className={'relative flex h-140 w-full gap-4 overflow-hidden'}>
         <ArrowButton direction="left" onTap={() => {}} />
         <ArrowButton direction="right" onTap={() => {}} />
         {collections.map((imageUrl) => {
@@ -38,11 +38,9 @@ type ArrowButtonProps = {
 function ArrowButton({ direction, onTap }: ArrowButtonProps) {
   return (
     <div
-      className={`flex justify-center items-center absolute rounded-4xl w-12 h-12 
-                  top-1/2 -translate-y-1/2 bg-background/70 m-2 transition-colors duration-100 hover:bg-background 
-                  shadow-gray-300 shadow-2xl cursor-pointer
-                  ${direction === 'left' ? 'left-0' : 'right-0'}
-      `}
+      className={`bg-background/70 hover:bg-background absolute top-1/2 m-2 flex h-12 w-12 -translate-y-1/2
+        cursor-pointer items-center justify-center rounded-4xl shadow-2xl shadow-gray-300 transition-colors duration-100
+        ${direction === 'left' ? 'left-0' : 'right-0'} `}
       onClick={() => onTap()}
     >
       {direction === 'left' ? <ArrowLeft /> : <ArrowRight />}
