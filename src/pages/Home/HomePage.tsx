@@ -1,6 +1,5 @@
 import BestSellers from '../../components/BestSellers'
 import { Navbar } from '../../components/Navbar'
-import ExploreCollections from './components/ExploreCollections'
 import { Slider } from './components/Slider'
 
 export default function HomePage() {
@@ -8,7 +7,7 @@ export default function HomePage() {
     <div className={'flex flex-col items-center'}>
       <Navbar />
       <Slider />
-      <ExploreCollections />
+      {/* <ExploreCollections /> */}
       <BestSellers />
     </div>
   )

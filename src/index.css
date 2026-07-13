@@ -6,6 +6,8 @@
   --color-surface: white;
   --color-placeholder: #f4f4f4;
   --color-text: #173f35;
+  --color-button: #173f35;
+  --color-button-text: white;
 
   --font-family-body: Inter;
   --font-family-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;

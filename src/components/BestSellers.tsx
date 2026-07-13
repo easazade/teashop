@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AppButton from './AppButton'
 
 export default function BestSellers() {
   const tabNames = ['TEAS', 'INFUSIONS', 'ROOIBOS', 'MATCHA TEA', 'PACKS']
@@ -32,6 +33,7 @@ export default function BestSellers() {
         })}
       </ul>
       <div className="flex-1">Items</div>
+      <AppButton label="SEE MORE" onClick={() => {}} />
     </div>
   )
 }
