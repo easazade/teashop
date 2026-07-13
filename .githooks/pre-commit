@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+staged_files="$(git diff --cached --name-only --diff-filter=ACMR)"
+
+echo "Running npm run format before commit..."
+npm run format
+
+# Re-stage only files that were already staged before formatting.
+# This lets formatter changes be included in the commit without adding unrelated files.
+if [ -n "$staged_files" ]; then
+  printf '%s\n' "$staged_files" | while IFS= read -r file; do
+    [ -n "$file" ] || continue
+    if [ -e "$file" ]; then
+      git add -- "$file"
+    fi
+  done
+fi
+
+echo "Format complete. Continuing commit."
