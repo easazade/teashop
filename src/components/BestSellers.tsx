@@ -33,7 +33,7 @@ export default function BestSellers() {
           )
         })}
       </ul>
-      <div className="mb-6 flex flex-1 flex-row gap-2">
+      <div className="mb-2 flex flex-1 flex-row gap-2">
         {Array.from({ length: 4 }, (_, index) => {
           return <ShopItem key={index} />
         })}
