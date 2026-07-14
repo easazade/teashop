@@ -1,6 +1,10 @@
+import { useState } from 'react'
 import ShopItem from './ShopItem'
 
 export default function Deals() {
+  const itemsCount = 4
+  const [currentIndex, setCurrentIndex] = useState(0)
+
   const itemsImage = 'https://teashop.com/cdn/shop/files/minitines_2.png?v=1782824733&width=1254'
 
   return (
@@ -13,7 +17,31 @@ export default function Deals() {
         <div className="mb-8 text-sm">Choose from irresistible flavours and create your perfect selection</div>
 
         <ShopItem />
+
+        <Indicator
+          currentIndex={currentIndex}
+          itemsCount={itemsCount}
+          onClick={function (index: number): void {
+            console.log(`item ${index} clicked`)
+          }}
+        />
       </div>
+    </div>
+  )
+}
+
+type IndicatorProps = {
+  currentIndex: number
+  itemsCount: number
+  onClick: (index: number) => void
+}
+
+function Indicator({ currentIndex, itemsCount, onClick }: IndicatorProps) {
+  return (
+    <div className="flex flex-row gap-1">
+      {Array.from({ length: itemsCount }, (_, index) => {
+        return <div>{index}</div>
+      })}
     </div>
   )
 }
