@@ -38,7 +38,7 @@ export default function BestSellers() {
           return <ShopItem key={index} />
         })}
       </div>
-      <AppButton label="SEE MORE" onClick={() => {}} minWidth={200} />
+      <AppButton label="SEE MORE" onTap={() => {}} minWidth={200} />
     </div>
   )
 }
