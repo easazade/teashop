@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { useState } from 'react'
 import { VerticalGap } from './Gap'
 import ShopItem from './ShopItem'
@@ -45,15 +46,13 @@ function Indicator({ currentIndex, itemsCount, onClick }: IndicatorProps) {
         const isActive = currentIndex === index
 
         return (
-          <button
-            key={index}
-            type="button"
-            className={isActive ? 'font-bold' : undefined}
-            aria-current={isActive ? 'true' : undefined}
+          <div
+            className={clsx(
+              'border-primary h-2.5 w-2.5 cursor-pointer rounded-2xl border-2',
+              isActive ? 'bg-primary' : 'bg-transparent'
+            )}
             onClick={() => onClick(index)}
-          >
-            {index}
-          </button>
+          ></div>
         )
       })}
     </div>
