@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import { useState } from 'react'
+import { cn } from '../utils/functions'
 import { VerticalGap } from './Gap'
 import ShopItem from './ShopItem'
 
@@ -47,7 +47,7 @@ function Indicator({ currentIndex, itemsCount, onClick }: IndicatorProps) {
 
         return (
           <div
-            className={clsx(
+            className={cn(
               'border-primary h-2.5 w-2.5 cursor-pointer rounded-2xl border-2',
               isActive ? 'bg-primary' : 'bg-transparent'
             )}
