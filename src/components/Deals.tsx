@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { VerticalGap } from './Gap'
 import ShopItem from './ShopItem'
 
 export default function Deals() {
@@ -17,12 +18,13 @@ export default function Deals() {
         <div className="mb-8 text-sm">Choose from irresistible flavours and create your perfect selection</div>
 
         <ShopItem />
+        <VerticalGap vertical={24} />
 
         <Indicator
           currentIndex={currentIndex}
           itemsCount={itemsCount}
           onClick={function (index: number): void {
-            console.log(`item ${index} clicked`)
+            setCurrentIndex(index)
           }}
         />
       </div>
@@ -40,7 +42,19 @@ function Indicator({ currentIndex, itemsCount, onClick }: IndicatorProps) {
   return (
     <div className="flex flex-row gap-1">
       {Array.from({ length: itemsCount }, (_, index) => {
-        return <div>{index}</div>
+        const isActive = currentIndex === index
+
+        return (
+          <button
+            key={index}
+            type="button"
+            className={isActive ? 'font-bold' : undefined}
+            aria-current={isActive ? 'true' : undefined}
+            onClick={() => onClick(index)}
+          >
+            {index}
+          </button>
+        )
       })}
     </div>
   )
