@@ -11,7 +11,7 @@ type TinCan = {
 export default function Deals() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const tinCans = [
+  const tinCans: TinCan[] = [
     { index: 0, offsetPercentage: { x: 49, y: 38 } },
     { index: 1, offsetPercentage: { x: 74, y: 43 } },
     { index: 2, offsetPercentage: { x: 28, y: 61 } },
@@ -32,7 +32,7 @@ export default function Deals() {
               onClick={() => setCurrentIndex(item.index)}
               className={cn(
                 `bg-surface shadow-surface text-primary absolute size-8 -translate-x-1/2 -translate-y-1/2 cursor-pointer
-                rounded-full shadow-xl`
+                rounded-full shadow-xl transition-transform hover:scale-110`
               )}
               style={{
                 left: `${item.offsetPercentage.x}%`,
