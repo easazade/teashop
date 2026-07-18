@@ -2,6 +2,7 @@ import BestSellers from '../../components/BestSellers'
 import Deals from '../../components/Deals'
 import { VerticalGap } from '../../components/Gap'
 import { Navbar } from '../../components/Navbar'
+import { OurHistory } from '../../components/OurHistory'
 import VisitStores from '../../components/VisitStores'
 import ExploreCollections from './components/ExploreCollections'
 import { Slider } from './components/Slider'
@@ -19,6 +20,8 @@ export default function HomePage() {
       <Deals />
       <VerticalGap vertical={30} />
       <VisitStores />
+      <VerticalGap vertical={30} />
+      <OurHistory />
     </div>
   )
 }

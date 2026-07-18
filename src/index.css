@@ -4,11 +4,11 @@
 @theme {
   --color-background: #fbfaf6;
   --color-surface: white;
+  --color-on-surface: #173f35;
   --color-placeholder: #f4f4f4;
   --color-text: #173f35;
   --color-primary: #173f35;
-  --color-button: #173f35;
-  --color-button-text: white;
+  --color-on-primary: white;
   --color-badge: rgb(243 243 243);
 
   --font-family-body: Inter;
