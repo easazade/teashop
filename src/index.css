@@ -3,13 +3,16 @@
 
 @theme {
   --color-background: #fbfaf6;
-  --color-surface: white;
+  --color-surface: gainsboro;
   --color-on-surface: #173f35;
   --color-placeholder: #f4f4f4;
   --color-text: #173f35;
   --color-primary: #173f35;
   --color-on-primary: white;
   --color-badge: rgb(243 243 243);
+  --color-footer-bg: rgb(242, 240, 236);
+  --color-light-text: rgb(139, 159, 154);
+  --color-gray-text: rgb(186, 186, 186);
 
   --font-family-body: Inter;
   --font-family-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
