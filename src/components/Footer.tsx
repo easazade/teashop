@@ -51,6 +51,25 @@ const links = [
   { label: '© TEASHOP', url: '/' },
 ]
 
+const mainLinks = [
+  {
+    menuTitle: 'TEA SHOP',
+    links: ['About Us', 'Blog', 'Sustainability', 'Open a Franchise', 'Work with us', 'Contact', 'Tea World'],
+  },
+  { menuTitle: 'HELP', links: ['Contact', 'Find Stores', 'Whistleblowing Channel', 'Withdraw from my purchase'] },
+  {
+    menuTitle: 'LEGAL',
+    links: [
+      'Withdraw from my purchase',
+      'Terms of Use',
+      'Privacy Policy',
+      'Shipping Guarantee',
+      'Cookies',
+      'Legal Bases',
+    ],
+  },
+]
+
 export function Footer() {
   return (
     <footer className={cn('bg-footer-bg flex h-140 w-full flex-row justify-between gap-40 px-12 py-16')}>
@@ -78,9 +97,18 @@ export function Footer() {
       </div>
       <div className="flex flex-1 basis-0 flex-col items-end">
         <div className="flex w-full flex-1 flex-row justify-evenly">
-          <div>Column 1</div>
-          <div>Column 2</div>
-          <div>Column 3</div>
+          {mainLinks.map((e) => {
+            return (
+              <div className="flex max-w-50 flex-col">
+                <span className="text-gray-text mb-5 text-sm">{e.menuTitle}</span>
+                <div className="flex flex-col gap-2.5 text-sm font-light">
+                  {e.links.map((item) => (
+                    <Link to={'/'}>{item}</Link>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
         </div>
         <div className="flex w-3/4 flex-wrap items-center justify-end gap-4">
           {paymentIcons.map(({ name, icon }) => (
