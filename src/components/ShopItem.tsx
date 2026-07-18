@@ -10,7 +10,7 @@ export default function ShopItem() {
       />
       <AppButton
         label={'Add to cart'}
-        onTap={() => {
+        onClick={() => {
           console.log('clicked on shop-item')
         }}
       />

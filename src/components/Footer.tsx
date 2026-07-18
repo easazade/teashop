@@ -25,8 +25,8 @@ export function Footer() {
         </p>
         <div className="flex flex-row gap-6">
           {socialMediaIcons.map(({ name, icon }) => (
-            <button key={name} type="button" aria-label={name} className="size-3.5 cursor-pointer">
-              <img src={icon} alt="" className="size-3.5" />
+            <button key={name} type="button" aria-label={name} className="size-4 cursor-pointer">
+              <img src={icon} alt="" className="size-4" />
             </button>
           ))}
         </div>
