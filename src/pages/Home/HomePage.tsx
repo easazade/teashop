@@ -23,7 +23,6 @@ export default function HomePage() {
       <VisitStores />
       <VerticalGap vertical={30} />
       <OurHistory />
-      <VerticalGap vertical={30} />
       <Footer />
     </div>
   )
