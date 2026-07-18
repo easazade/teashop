@@ -10,7 +10,7 @@ import { Slider } from './components/Slider'
 
 export default function HomePage() {
   return (
-    <div className={'flex flex-col items-center pb-40'}>
+    <div className={'flex flex-col items-center'}>
       <Navbar />
       <Slider />
       <VerticalGap vertical={30} />
