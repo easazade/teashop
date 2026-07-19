@@ -19,7 +19,7 @@ export default function AppButton({ label, onClick, minWidth = 100, inverted = f
         inverted
           ? 'bg-on-primary text-primary border-on-primary hover:text-on-primary'
           : 'bg-primary text-on-primary border-primary hover:text-primary',
-        'cursor-pointer border-3 p-2 text-sm transition-colors hover:bg-transparent'
+        'cursor-pointer border-3 px-2 py-1.5 text-sm transition-colors hover:bg-transparent'
       )}
     >
       {label.toUpperCase()}

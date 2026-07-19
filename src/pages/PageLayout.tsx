@@ -1,10 +1,11 @@
 import { useEffect, type ReactNode } from 'react'
 import { Footer } from '../components/Footer'
+import { Navbar } from '../components/Navbar'
 import { cn } from '../utils/functions'
 
 type PageLayoutProps = {
   title?: string
-  children: ReactNode
+  children?: ReactNode
   className?: string
 }
 
@@ -18,9 +19,10 @@ export function PageLayout({ title = 'TeaShop ☕', children, className: classNa
   }, [title])
 
   return (
-    <div className={cn('flex flex-col items-center', classNames)}>
-      {children}
+    <>
+      <Navbar />
+      <div className={cn('flex flex-col items-center', classNames)}>{children}</div>
       <Footer />
-    </div>
+    </>
   )
 }

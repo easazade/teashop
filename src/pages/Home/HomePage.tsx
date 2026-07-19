@@ -1,17 +1,15 @@
 import BestSellers from '../../components/BestSellers'
 import Deals from '../../components/Deals'
 import { VerticalGap } from '../../components/Gap'
-import { Navbar } from '../../components/Navbar'
 import { OurHistory } from '../../components/OurHistory'
 import VisitStores from '../../components/VisitStores'
-import { PageLayout } from '../Scaffold'
+import { PageLayout } from '../PageLayout'
 import ExploreCollections from './components/ExploreCollections'
 import { Slider } from './components/Slider'
 
 export default function HomePage() {
   return (
     <PageLayout>
-      <Navbar />
       <Slider />
       <VerticalGap vertical={30} />
       <ExploreCollections />
