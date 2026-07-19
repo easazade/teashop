@@ -1,6 +1,6 @@
 import { Languages, Menu, ShoppingBasket } from 'lucide-react'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
 import { PATHS } from '../routes'
 import CartOverlay from './Cart/CartOverlay'
 import Logo from './Logo'
@@ -9,6 +9,8 @@ import { SearchBar } from './SearchBar'
 export function Navbar() {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const navigate = useNavigate()
+  const { pathname } = useLocation()
+  const isAuthPath = pathname === PATHS.login || pathname === PATHS.auth
 
   return (
     <>
@@ -20,7 +22,7 @@ export function Navbar() {
           <Logo sizeType="compact" />
         </div>
         <div className={'flex-1'}></div>
-        <Link to={PATHS.auth}>Login</Link>
+        {!isAuthPath && <Link to={PATHS.auth}>Login</Link>}
         <Languages size={20} />
         <ShoppingBasket size={20} onClick={() => setIsCartOpen(true)} cursor={'pointer'} />
       </nav>
