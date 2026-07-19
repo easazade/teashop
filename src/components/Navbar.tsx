@@ -1,6 +1,7 @@
 import { Languages, Menu, ShoppingBasket } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router'
+import { PATHS } from '../routes'
 import CartOverlay from './Cart/CartOverlay'
 import Logo from './Logo'
 import { SearchBar } from './SearchBar'
@@ -19,7 +20,7 @@ export function Navbar() {
           <Logo sizeType="compact" />
         </div>
         <div className={'flex-1'}></div>
-        <Link to={'/login'}>Login</Link>
+        <Link to={PATHS.auth}>Login</Link>
         <Languages size={20} />
         <ShoppingBasket size={20} onClick={() => setIsCartOpen(true)} cursor={'pointer'} />
       </nav>
