@@ -25,7 +25,9 @@ export default function LoginPage() {
         value={password}
         onChange={(input) => setPassword(input.target.value)}
       >
-        <span className="cursor-pointer text-xs">Forgot your password?</span>
+        <span className="text-gray-text hover:text-primary cursor-pointer text-xs transition-colors">
+          Forgot your password?
+        </span>
       </AppInput>
       <AppButton
         label="Login"
