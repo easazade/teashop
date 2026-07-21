@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
+import { Selector } from '../../components/Selector'
+import { tryParseInt } from '../../utils/functions'
 import { PageLayout } from '../PageLayout'
 
 export default function SignUpPage() {
@@ -8,6 +10,10 @@ export default function SignUpPage() {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const genderOptions = ['unspecified', 'male', 'female']
+
+  const [genderIndex, setGenderIndex] = useState(0)
 
   return (
     <PageLayout title="Login" className="gap-4 p-54">
@@ -38,6 +44,19 @@ export default function SignUpPage() {
         type="password"
         value={password}
         onChange={(input) => setPassword(input.target.value)}
+      />
+      <Selector
+        selectedIndex={genderIndex}
+        options={genderOptions}
+        getName={(genderIndex) => genderOptions[genderIndex]}
+        onChange={(selectedIndex) => {
+          console.log('selectedIndex:', selectedIndex, selectedIndex.target.value)
+          const index = tryParseInt(selectedIndex.target.value)
+          if (index != null) {
+            console.log(`setting selected index ${index}`)
+            setGenderIndex(index)
+          }
+        }}
       />
 
       <Button
