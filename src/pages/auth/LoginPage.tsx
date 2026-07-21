@@ -37,7 +37,9 @@ export default function LoginPage() {
           alert(`Email is ${email} & Password is ${password}`)
         }}
       />
-      <span className="text-primary-light text-sm font-light">Don't have an account? Sign up</span>
+      <span className="text-primary-light hover:text-primary cursor-pointer text-sm font-light">
+        Don't have an account? Sign up
+      </span>
     </PageLayout>
   )
 }
