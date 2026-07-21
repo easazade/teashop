@@ -1,15 +1,14 @@
-import { useEffect, type ReactNode } from 'react'
+import { useEffect, type ComponentPropsWithoutRef, type ReactNode } from 'react'
 import { Footer } from '../components/Footer'
 import { Navbar } from '../components/Navbar'
 import { cn } from '../utils/functions'
 
-type PageLayoutProps = {
+type PageLayoutProps = ComponentPropsWithoutRef<'div'> & {
   title?: string
   children?: ReactNode
-  className?: string
 }
 
-export function PageLayout({ title = 'TeaShop ☕', children, className: classNames = '' }: PageLayoutProps) {
+export function PageLayout({ title = 'TeaShop ☕', children, className, ...props }: PageLayoutProps) {
   useEffect(() => {
     const pageTitle = title?.trim()
 
@@ -21,7 +20,9 @@ export function PageLayout({ title = 'TeaShop ☕', children, className: classNa
   return (
     <>
       <Navbar />
-      <div className={cn('flex flex-col items-center', classNames)}>{children}</div>
+      <div {...props} className={cn('flex flex-col items-center', className)}>
+        {children}
+      </div>
       <Footer />
     </>
   )

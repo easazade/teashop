@@ -13,6 +13,7 @@
   --color-footer-bg: rgb(242, 240, 236);
   --color-light-text: rgb(139, 159, 154);
   --color-gray-text: rgb(186, 186, 186);
+  --color-error: firebrick;
 
   --font-family-body: Inter;
   --font-family-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;

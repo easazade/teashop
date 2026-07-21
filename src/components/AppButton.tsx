@@ -1,16 +1,17 @@
-import type { CSSProperties, MouseEventHandler } from 'react'
+import type { ComponentPropsWithoutRef, CSSProperties, MouseEventHandler } from 'react'
 import { cn } from '../utils/functions'
 
-type AppButtonProps = {
+type AppButtonProps = ComponentPropsWithoutRef<'button'> & {
   label: string
   onClick: MouseEventHandler<HTMLButtonElement>
   minWidth?: CSSProperties['minWidth']
   inverted?: boolean
 }
 
-export default function AppButton({ label, onClick, minWidth = 100, inverted = false }: AppButtonProps) {
+export default function AppButton({ label, onClick, minWidth = 100, inverted = false, ...props }: AppButtonProps) {
   return (
     <button
+      {...props}
       type="button"
       onClick={onClick}
       // in below line you see javascript object short hand feature. complete version is {minWidth: minWidth}
