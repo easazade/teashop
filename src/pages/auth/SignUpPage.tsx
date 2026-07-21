@@ -50,10 +50,8 @@ export default function SignUpPage() {
         options={genderOptions}
         getName={(genderIndex) => genderOptions[genderIndex]}
         onChange={(selectedIndex) => {
-          console.log('selectedIndex:', selectedIndex, selectedIndex.target.value)
           const index = tryParseInt(selectedIndex.target.value)
           if (index != null) {
-            console.log(`setting selected index ${index}`)
             setGenderIndex(index)
           }
         }}

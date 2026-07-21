@@ -7,11 +7,14 @@ type SelectorProps = ComponentPropsWithoutRef<'select'> & {
 }
 
 export function Selector({ selectedIndex, options, getName, ...props }: SelectorProps) {
-  console.log(`selected index is : ${selectedIndex}`)
   return (
-    <select {...props} value={options[selectedIndex]}>
+    <select {...props} value={selectedIndex}>
       {options.map((_, index) => {
-        return <option value={index}>{getName(index)}</option>
+        return (
+          <option key={index} value={index}>
+            {getName(index)}
+          </option>
+        )
       })}
     </select>
   )
