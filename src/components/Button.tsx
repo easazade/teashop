@@ -8,7 +8,7 @@ type AppButtonProps = ComponentPropsWithoutRef<'button'> & {
   inverted?: boolean
 }
 
-export default function AppButton({ label, onClick, minWidth = 100, inverted = false, ...props }: AppButtonProps) {
+export default function Button({ label, onClick, minWidth = 100, inverted = false, ...props }: AppButtonProps) {
   return (
     <button
       {...props}

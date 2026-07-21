@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import AppButton from './AppButton'
+import Button from './Button'
 import ShopItem from './ShopItem'
 
 export default function BestSellers() {
@@ -38,7 +38,7 @@ export default function BestSellers() {
           return <ShopItem key={index} />
         })}
       </div>
-      <AppButton label="SEE MORE" onClick={() => {}} minWidth={200} />
+      <Button label="SEE MORE" onClick={() => {}} minWidth={200} />
     </div>
   )
 }

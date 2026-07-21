@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import AppButton from '../../components/AppButton'
+import Button from '../../components/Button'
 import { PATHS } from '../../routes'
 import { PageLayout } from '../PageLayout'
 
@@ -11,8 +11,8 @@ export default function AuthPage() {
       <h2>Login or Join the Tea Club</h2>
       <p className="text-sm font-light">Collect stamps, get discounts and access exclusive promotions</p>
       <div className="mt-8 flex flex-row justify-center gap-8">
-        <AppButton label="Register me" onClick={() => navigate(PATHS.signup)} minWidth={220} />
-        <AppButton label="Login" onClick={() => navigate(PATHS.login)} minWidth={220} />
+        <Button label="Register me" onClick={() => navigate(PATHS.signup)} minWidth={220} />
+        <Button label="Login" onClick={() => navigate(PATHS.login)} minWidth={220} />
       </div>
     </PageLayout>
   )

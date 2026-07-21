@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import store1 from '../assets/store1.jpg'
 import store2 from '../assets/store2.png'
-import AppButton from './AppButton'
+import Button from './Button'
 import { VerticalGap } from './Gap'
 
 export default function VisitStores() {
@@ -17,7 +17,7 @@ export default function VisitStores() {
           high quality of our product and receive the best advice from our specialized staff.
         </p>
         <VerticalGap vertical={20} />
-        <AppButton
+        <Button
           label={'search for stores'}
           minWidth={232}
           onClick={() => {

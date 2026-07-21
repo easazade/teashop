@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import AppButton from '../../components/AppButton'
-import AppInput from '../../components/AppInput'
+import Button from '../../components/Button'
+import Input from '../../components/Input'
 import { PageLayout } from '../PageLayout'
 
 export default function LoginPage() {
@@ -11,14 +11,14 @@ export default function LoginPage() {
     <PageLayout title="Login" className="gap-4 p-54">
       <h1>Login</h1>
       <p className="mt-2 mb-2 text-sm font-light">Enter your email and password to login:</p>
-      <AppInput
+      <Input
         placeholder={'E-mail'}
         minWidth={420}
         type="email"
         value={email}
         onChange={(input) => setEmail(input.target.value)}
       />
-      <AppInput
+      <Input
         placeholder={'Password'}
         minWidth={420}
         type="password"
@@ -28,8 +28,8 @@ export default function LoginPage() {
         <span className="text-gray-text hover:text-primary cursor-pointer text-xs transition-colors">
           Forgot your password?
         </span>
-      </AppInput>
-      <AppButton
+      </Input>
+      <Button
         label="Login"
         minWidth={420}
         className="mt-2"

@@ -1,4 +1,4 @@
-import AppButton from './AppButton'
+import Button from './Button'
 import Rating from './Rating'
 
 export default function ShopItem() {
@@ -8,7 +8,7 @@ export default function ShopItem() {
         src="https://teashop.com/cdn/shop/files/10156_ChaiLatte_1000x1000_l.jpg?v=1772541329&width=1000"
         className="max-w-84"
       />
-      <AppButton
+      <Button
         label={'Add to cart'}
         onClick={() => {
           console.log('clicked on shop-item')

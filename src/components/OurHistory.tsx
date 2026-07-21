@@ -1,5 +1,5 @@
 import history1 from '../assets/history1.jpg'
-import AppButton from './AppButton'
+import Button from './Button'
 
 export function OurHistory() {
   return (
@@ -18,7 +18,7 @@ export function OurHistory() {
             evolution. Our purpose is to offer the best fresh tea in bulk. That's why our carefully selected selection
             of up to 130 varieties of teas and infusions includes proprietary blends carefully developed by our experts.
           </p>
-          <AppButton label="See more" onClick={() => {}} inverted={true} minWidth={180} />
+          <Button label="See more" onClick={() => {}} inverted={true} minWidth={180} />
         </div>
       </div>
     </div>
