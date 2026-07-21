@@ -14,16 +14,18 @@ export default function LoginPage() {
       <AppInput
         placeholder={'E-mail'}
         minWidth={420}
+        type="email"
         value={email}
         onChange={(input) => setEmail(input.target.value)}
       />
       <AppInput
         placeholder={'Password'}
         minWidth={420}
+        type="password"
         value={password}
         onChange={(input) => setPassword(input.target.value)}
       >
-        <span className="text-xs">Forgot your password?</span>
+        <span className="cursor-pointer text-xs">Forgot your password?</span>
       </AppInput>
       <AppButton
         label="Login"
