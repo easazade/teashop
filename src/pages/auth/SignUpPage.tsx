@@ -13,7 +13,7 @@ export default function SignUpPage() {
 
   const genderOptions = ['unspecified', 'male', 'female']
 
-  const [genderIndex, setGenderIndex] = useState(0)
+  const [genderIndex, setGenderIndex] = useState(-1)
 
   return (
     <PageLayout title="Login" className="gap-4 p-54">
@@ -48,6 +48,7 @@ export default function SignUpPage() {
       <Selector
         selectedIndex={genderIndex}
         options={genderOptions}
+        minWidth={420}
         getName={(genderIndex) => genderOptions[genderIndex]}
         onChange={(selectedIndex) => {
           const index = tryParseInt(selectedIndex.target.value)
