@@ -3,7 +3,7 @@ export const SEGMENTS = {
   auth: 'auth',
   login: 'login',
   signup: 'signup',
-  stores: 'stores',
+  shops: 'shops',
 } as const
 
 export const ROUTES = {
@@ -11,5 +11,5 @@ export const ROUTES = {
   auth: `/${SEGMENTS.auth}`,
   login: `/${SEGMENTS.login}`,
   signup: `/${SEGMENTS.signup}`,
-  stores: `/${SEGMENTS.stores}`,
+  shops: `/${SEGMENTS.shops}`,
 } as const

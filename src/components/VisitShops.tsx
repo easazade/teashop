@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import store1 from '../assets/store1.jpg'
 import store2 from '../assets/store2.png'
+import { ROUTES } from '../routes'
 import Button from './Button'
 import { VerticalGap } from './Gap'
 
@@ -10,7 +11,7 @@ export default function VisitStores() {
   return (
     <div className="flex min-h-180 w-full flex-row gap-16 p-10">
       <div className="flex flex-1 basis-0 flex-col items-start justify-center">
-        <h4>VISIT OUR STORES</h4>
+        <h4>VISIT OUR SHOPS</h4>
         <VerticalGap vertical={12} />
         <p className="max-w-140 text-2xl">
           Immerse yourself in a sensory experience by visiting our stores, where you can taste our teas, appreciate the
@@ -18,10 +19,10 @@ export default function VisitStores() {
         </p>
         <VerticalGap vertical={20} />
         <Button
-          label={'search for stores'}
+          label={'search for shops'}
           minWidth={232}
           onClick={() => {
-            navigate('/stores')
+            navigate(ROUTES.shops)
           }}
         />
       </div>
