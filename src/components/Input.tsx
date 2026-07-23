@@ -7,7 +7,16 @@ type AppInputProps = ComponentPropsWithoutRef<'input'> & {
   children?: ReactNode
 }
 
-export function Input({ error, children, minWidth, className, value, id, placeholder, ...inputProps }: AppInputProps) {
+export default function Input({
+  error,
+  children,
+  minWidth,
+  className,
+  value,
+  id,
+  placeholder,
+  ...inputProps
+}: AppInputProps) {
   const generatedId = useId()
   const inputId = id ?? generatedId
 
@@ -44,5 +53,3 @@ export function Input({ error, children, minWidth, className, value, id, placeho
     </div>
   )
 }
-
-export default Input

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Button from '../../components/Button'
+import DatePicker from '../../components/DatePicker'
 import Input from '../../components/Input'
 import { Selector } from '../../components/Selector'
 import { tryParseInt } from '../../utils/functions'
@@ -12,12 +13,13 @@ export default function SignUpPage() {
   const [password, setPassword] = useState('')
 
   const genderOptions = ['male', 'female']
-
   const [genderIndex, setGenderIndex] = useState<number>()
 
+  const [birthday, setBirthday] = useState('1994-02-22')
+
   return (
-    <PageLayout title="Login" className="gap-4 p-54">
-      <h1>Login</h1>
+    <PageLayout title="Sign up" className="gap-4 p-28">
+      <h1>Sign up</h1>
       <p className="mt-2 mb-2 text-sm font-light">Enter your email and password to login:</p>
       <Input
         placeholder={'First name'}
@@ -58,7 +60,19 @@ export default function SignUpPage() {
           }
         }}
       />
+      <DatePicker
+        minWidth={420}
+        value={birthday}
+        onChange={(event) => {
+          const date = event.currentTarget.value
+          const isValidDate = !Number.isNaN(event.currentTarget.valueAsNumber)
 
+          // Allowing valid dates and no date to be selected
+          if (date === '' || isValidDate) {
+            setBirthday(date)
+          }
+        }}
+      />
       <Button
         label="Create account"
         minWidth={420}
