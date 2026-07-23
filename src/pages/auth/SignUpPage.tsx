@@ -1,12 +1,15 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button'
 import DatePicker from '../../components/DatePicker'
 import Input from '../../components/Input'
 import { Selector } from '../../components/Selector'
+import { ROUTES } from '../../routes'
 import { tryParseInt } from '../../utils/functions'
 import { PageLayout } from '../PageLayout'
 
 export default function SignUpPage() {
+  const navigate = useNavigate()
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
@@ -81,7 +84,10 @@ export default function SignUpPage() {
           alert(`Email is ${email} & Password is ${password}`)
         }}
       />
-      <span className="text-primary-light hover:text-primary cursor-pointer text-sm font-light">
+      <span
+        className="text-primary-light hover:text-primary cursor-pointer text-sm font-light"
+        onClick={() => navigate(ROUTES.login)}
+      >
         Already have an account? Login
       </span>
     </PageLayout>

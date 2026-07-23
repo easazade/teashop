@@ -1,11 +1,14 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
+import { ROUTES } from '../../routes'
 import { PageLayout } from '../PageLayout'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const navigate = useNavigate()
 
   return (
     <PageLayout title="Login" className="gap-4 p-54">
@@ -37,7 +40,10 @@ export default function LoginPage() {
           alert(`Email is ${email} & Password is ${password}`)
         }}
       />
-      <span className="text-primary-light hover:text-primary cursor-pointer text-sm font-light">
+      <span
+        className="text-primary-light hover:text-primary cursor-pointer text-sm font-light"
+        onClick={() => navigate(ROUTES.signup)}
+      >
         Don't have an account? Sign up
       </span>
     </PageLayout>

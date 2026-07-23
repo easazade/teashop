@@ -1,15 +1,15 @@
-export const LOCATIONS = Object.freeze({
+export const SEGMENTS = {
   home: '/',
   auth: 'auth',
   login: 'login',
   signup: 'signup',
   stores: 'stores',
-})
+} as const
 
-export const PATHS = Object.freeze({
+export const ROUTES = {
   home: '/',
-  auth: `/${LOCATIONS.auth}`,
-  login: `/${LOCATIONS.login}`,
-  signup: `/${LOCATIONS.signup}`,
-  stores: `/${LOCATIONS.stores}`,
-})
+  auth: `/${SEGMENTS.auth}`,
+  login: `/${SEGMENTS.login}`,
+  signup: `/${SEGMENTS.signup}`,
+  stores: `/${SEGMENTS.stores}`,
+} as const
